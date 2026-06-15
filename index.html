@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kasivo_drums</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
   </head>
   <body>
@@ -21,10 +25,142 @@
       </nav>
     </header>
     <main>
-      <section id="home"></section>
-      <section id="about"></section>
-      <section id="featured"></section>
-      <section id="booking"></section>
+      <section id="home">
+        <div class="name">
+          <h2>Kasivo_drums</h2>
+          <p>Where rhythmn meets passion</p>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about-des">
+          <div class="about-me">
+            <h2>About me</h2>
+            <p>
+              Hello. I am Stephen Kasivo. Welcome to Kasivo drums. As a session
+              and a live performance drummer, I provide a solid foundation and a
+              rhythmic texture that takes a musical project from good to
+              unforgettable. My mission is to elevate live music and studio
+              production with flawless timing.
+            </p>
+          </div>
+          <span class="dp"></span>
+        </div>
+        <div class="genres">
+          <h3>Music Styles</h3>
+          <ul>
+            <li>Rock</li>
+            <li>Jazz</li>
+            <li>Slow sets</li>
+            <li>Fast sets</li>
+            <li>African</li>
+          </ul>
+        </div>
+      </section>
+      <section id="featured">
+        <p>
+          Dive into a curated selection of live performances and studio sessions
+          that capture the raw energy, precision, and unstoppable groove behind
+          the kit
+        </p>
+        <div class="video-cont">
+          <i class="fa-solid fa-angle-left"></i>
+          <div class="video-track">
+            <div class="video-slide active">
+              <video loop muted playsinline controls>
+                <source src="./videos/video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="video-slide">
+              <video loop muted playsinline controls>
+                <source src="./videos/video2.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="video-slide">
+              <video loop muted playsinline controls>
+                <source src="./videos/video3.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
+      <section id="booking">
+        <p>Bring the heartbeat to your project. Secure your session today</p>
+        <div class="booking-details">
+          <form>
+            <span>
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </span>
+            <span>
+              <label for="number">Phone Number</label>
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                placeholder="eg. 0712345678"
+                required
+              />
+            </span>
+            <select name="choose" id="choose">
+              <option value="one">One day</option>
+              <option value="more">More than one day</option>
+            </select>
+            <span id="chose-one">
+              <label for="date">Date</label>
+              <input type="date" name="date" id="date" />
+            </span>
+            <span id="chose-two">
+              <span id="calender">
+                <label for="from">From</label>
+                <input type="date" name="from" id="from" />
+              </span>
+              <span id="calender">
+                <label for="to">To</label>
+                <input type="date" name="to" id="to" />
+              </span>
+            </span>
+            <span>
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Add a description"
+                required
+              ></textarea>
+            </span>
+            <p id="confirm"></p>
+            <button type="submit">Book now</button>
+          </form>
+          <div class="handles">
+            <a href="mailto:stevemusau18@gmail.com" target="_blank"
+              ><i class="fa-regular fa-envelope"></i> stevemusau18@gmail.com</a
+            >
+            <a href="https://wa.link/dk5gwg" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i> 0718142837</a
+            >
+            <a
+              href="https://www.instagram.com/s_kasivo.002?igsh=MXNvamRqc2RjZ2Jrbw=="
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i> stephen_kasivo</a
+            >
+            <a
+              href="https://www.tiktok.com/@theodore_le_drummer.002?_r=1&_t=ZS-97DBK9jhEvp"
+              target="_blank"
+              ><i class="fa-brands fa-tiktok"></i> Stephen Kasivo</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-left">
@@ -39,6 +175,15 @@
         <a href="#booking"><button>Get in touch</button></a>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("0HlLIi5bANWkVi8Lb");
+      })();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
