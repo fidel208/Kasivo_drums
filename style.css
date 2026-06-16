@@ -130,6 +130,13 @@ main {
 .about-me > p {
   max-width: 600px;
 }
+.about-me > h3 {
+  color: #4deeea;
+  margin-top: 15px;
+}
+.about-me > ul {
+  max-width: 500px;
+}
 .dp {
   height: 300px;
   width: 300px;
@@ -446,22 +453,8 @@ footer {
   color: #f0f4f8;
   text-decoration: none;
 }
-.quick-links > a > button {
-  background-color: #4deeea;
-  color: #0b0f19;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(77, 238, 234, 0.3);
-  transition: all 0.3s ease;
-  margin-top: 10px;
-  max-width: 200px;
-  font-size: 15px;
-}
-.quick-links > a > button:hover {
-  transform: translateY(-2px);
-  background-color: #329e9c;
+.quick-links > a:hover {
+  color: #4deeea;
 }
 
 @media (max-width: 1024px) {
@@ -509,12 +502,21 @@ footer {
     text-align: center;
     padding: 0 20px;
   }
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .about-me > p {
-    max-width: 600px;
+    max-width: 700px;
+  }
+  .about-me > ul {
+    max-width: 700px;
   }
   .dp {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
   }
   .genres ul {
     justify-content: center;
@@ -660,6 +662,9 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .about-me > ul {
+    max-width: 300px;
+  }
   #featured {
     width: 100%;
     height: auto;
@@ -713,6 +718,12 @@ footer {
   footer {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+  }
+  .quick-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
