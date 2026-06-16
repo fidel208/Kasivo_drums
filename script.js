@@ -99,11 +99,10 @@ if (contactForm && formStatus) {
     formStatus.style.opacity = "1";
 
     emailjs
-      .sendForm("service_uu5o7u7", "template_houqf9x", this)
+      .sendForm("service_1vjrdzp", "template_waf6vwh", this)
       .then(() => {
         formStatus.style.color = "#10b981";
-        formStatus.textContent =
-          "Message sent successfully! Thank you for reaching out.";
+        formStatus.textContent = "Booked successfyly.";
 
         contactForm.reset();
       })
@@ -111,7 +110,7 @@ if (contactForm && formStatus) {
         console.error("Mail Delivery Failure:", error);
         formStatus.style.color = "#ef4444";
         formStatus.textContent =
-          "Failed to send message. Please try again or email me directly.";
+          "Failed to book. Please try again or email me directly.";
       })
       .finally(() => {
         submitButton.textContent = originalButtonText;
@@ -126,3 +125,26 @@ if (contactForm && formStatus) {
       });
   });
 }
+
+const menuIcon = document.getElementById("menu-icon");
+const navMenu = document.querySelector("nav");
+
+menuIcon.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+
+  if (navMenu.classList.contains("open")) {
+    menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-xmark");
+  } else {
+    menuIcon.classList.remove("fa-xmark");
+    menuIcon.classList.add("fa-bars");
+  }
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    menuIcon.classList.remove("fa-xmark");
+    menuIcon.classList.add("fa-bars");
+  });
+});

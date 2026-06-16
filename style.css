@@ -45,6 +45,9 @@ header > span > img {
 h1 {
   font-size: 30px;
 }
+#menu-icon {
+  display: none;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -572,5 +575,144 @@ footer {
   .quick-links {
     padding: 0;
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+  }
+  .title > img {
+    width: 70px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  #menu-icon {
+    display: flex;
+    background-color: #334363;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 22px;
+  }
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(11, 15, 25, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(156, 117, 248, 0.1);
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  nav > a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  #home {
+    width: 100%;
+    height: auto;
+  }
+  .name {
+    padding: 60px 20px;
+  }
+  .name > h2 {
+    font-size: 30px;
+  }
+  .name > p {
+    font-size: 18px;
+  }
+  .dp {
+    width: 200px;
+    height: 200px;
+  }
+  #about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #featured {
+    width: 100%;
+    height: auto;
+  }
+  .video-cont {
+    max-width: 90%;
+    gap: 10px;
+  }
+  #booking {
+    padding-bottom: 50px;
+  }
+  #booking > p {
+    font-size: 20px;
+  }
+  .booking-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .booking-details > form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .booking-details > form > button {
+    max-width: 100%;
+  }
+  label {
+    font-size: 15px;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    font-size: 15px !important;
+  }
+  #chose-two {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+  .handles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .handles > a {
+    padding: 10px;
+    width: 90%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
   }
 }
