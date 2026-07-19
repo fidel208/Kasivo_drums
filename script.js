@@ -153,4 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
       menuIcon.classList.add("fa-bars");
     });
   });
+
+  function getYear() {
+    const yearText = document.getElementById("year");
+
+    yearText.textContent = new Date().getFullYear();
+  }
+  getYear();
 });

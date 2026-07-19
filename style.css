@@ -94,7 +94,7 @@ main {
   font-size: 50px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: linear-gradient(45deg, #4deeea, #ea4afc);
+  background: linear-gradient(45deg, #4deeea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.7));
@@ -102,6 +102,16 @@ main {
 .name > p {
   font-size: 25px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.name a > button {
+  width: 50%;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #4deeea;
+}
+.name a > button:hover {
+  background-color: #34a1a0;
 }
 #about {
   height: 100dvh;
@@ -350,7 +360,6 @@ label {
 }
 .booking-details > form > button:hover {
   box-shadow: 0 0 5px rgba(77, 238, 234, 0.6);
-  transform: translateY(-2px);
   background-color: #329e9c;
 }
 #confirm {
@@ -422,7 +431,6 @@ label {
 .handles > a:hover {
   background: #1f293d;
   border-left-color: #4deeea;
-  transform: translateX(5px);
 }
 #two {
   display: none;
@@ -432,9 +440,13 @@ footer {
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 300px;
+  justify-content: space-evenly;
   box-sizing: border-box;
+  font-size: 18px;
+  color: #afb1b4;
+}
+footer h3 {
+  color: white;
 }
 .footer-left {
   padding-top: 50px;
@@ -443,20 +455,52 @@ footer {
   gap: 10px;
   align-items: center;
 }
+.quick-links-box {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quick-links-box h3 {
+  font-size: 18px;
+}
 .quick-links {
-  padding: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .quick-links > a {
-  color: #f0f4f8;
+  color: #afb1b4;
   text-decoration: none;
 }
 .quick-links > a:hover {
   color: #4deeea;
 }
-
+.footer-handles-box {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-handles-box h3 {
+  font-size: 18px;
+}
+.footer-handles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-handles a {
+  color: #afb1b4;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.footer-handles a:hover {
+  color: #4deeea;
+}
 @media (max-width: 1024px) {
   body {
     font-size: 18px;
@@ -574,9 +618,13 @@ footer {
   .footer-left {
     padding-top: 0;
   }
-  .quick-links {
+  .quick-links-box {
     padding: 0;
-    align-items: center;
+    text-align: left;
+  }
+  .footer-handles-box {
+    padding: 0;
+    text-align: left;
   }
 }
 
@@ -652,6 +700,10 @@ footer {
   .name > p {
     font-size: 18px;
   }
+  .name a > button {
+    font-size: 15px;
+    width: 40%;
+  }
   .dp {
     width: 200px;
     height: 200px;
@@ -718,6 +770,12 @@ footer {
   footer {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .quick-links-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .quick-links {
     display: flex;
@@ -725,5 +783,8 @@ footer {
     gap: 10px;
     align-items: center;
     justify-content: center;
+  }
+  .footer-handles-box {
+    align-items: center;
   }
 }
